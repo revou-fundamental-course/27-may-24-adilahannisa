@@ -8,7 +8,10 @@
 </head>
 <body>
     <nav>
-        <div class ="logo-icon"></div>
+        <div class ="logo-icon">
+
+        </div>
+
         <section>
             <a class="nav-item" href="#home">Home</a>
             <a class="nav-item" href="#about-us">About Us</a>
@@ -23,13 +26,15 @@
         <!-- Home -->
         <section id="home">
             <header>
-                <h1>Hello Adilah, Welcome to Our Website!</h1>
+                <h2>Selamat datang di Website Restoran 'Paga Rindu'!</h2>
             </header>
 
             <article>
-                <p>How is your day?</p>
+                <p>"Dari Ranah Minang untuak Dunsanak"</p>
 
-                <div class="banner-container"></div>
+                <div class="banner-container">
+                    <a href="#link"><img src="C:\Users\adila\Downloads\Nasi Padang Photography.jpeg"></a>
+                </div>
             </article>
         </section>
 
@@ -38,31 +43,48 @@
         <!-- About Us -->
         <section id="about-us">
             <header>
-                <h1>About Us</h1>
+                <h2>About Us</h2>
             </header>
         </section>
+
+        <hr>
 
         <!-- Our Menu -->
         <section id="menu">
             <header>
-                <h1>Our Menu</h1>
+                <h2>Our Menu</h2>
             </header>
 
-            <article class="menu-list">
+            <article class= "our-menu">
                 <div>
                     <div style="width: 50px; height: 50px; border: 1px solid black;"></div>
-                    <h5>Free Refill</h2>
-                </div>
-                
-                <div>
-                    <div style="width: 50px; height: 50px; border: 1px solid black;"></div>
-                    <h5>Free Refill</h2>
+                    <h5>Kalio</h5>
                 </div>
 
                 <div>
                     <div style="width: 50px; height: 50px; border: 1px solid black;"></div>
-                    <h5>Free Refill</h2>
+                    <h5>Sate Padang</h5>
                 </div>
+
+                <div>
+                    <div style="width: 50px; height: 50px; border: 1px solid black;"></div>
+                    <h5>Teh Es</h5>
+                    </div>
+
+                 <div>
+                    <div style="width: 50px; height: 50px; border: 1px solid black;"></div>
+                    <h5>Air Mineral</h5>
+                </div>
+
+                <div>
+                    <div style="width: 50px; height: 50px; border: 1px solid black;"></div>
+                    <h5>Jes Jeruk</h2>
+                    </div>
+
+                <div>
+                    <div style="width: 50px; height: 50px; border: 1px solid black;"></div>
+                    <h5>Jes Alpukat</h2>
+                    </div>
             </article>
         </section>
 
@@ -71,26 +93,30 @@
         <!-- Contact Us-->
         <section id="contact-us">
             <header>
-                <h1>Contact Us</h1>
+                <h2>Contact Us</h2>
             </header>
 
             <section class="contact-us-section">
                 <!-- Form -->
                 <section>
                     <form>
-                        <label for="nama">Nama:</label>
-                        <input type="text" id="nama" name="nama" placeholder="Nama yg mereservasi"/>
+                        <label for="nama-pelanggan">Nama Pelanggan</label>
+                        <input type="text" id="nama-pelanggan" name="nama-pelanggan" placeholder="Siapa yang mereservasi?"/><br>
+                        <span id="nama-pelanggan-error" class="error-message"></span>
+                        
+                        <label for="banyak-orang">Banyak orang</label>
+                        <input type="text" id="banyak-orang" name="banyak-orang" placeholder="Berapa banyak orang untuk direservasi?" required/><br>
+                        <span id="banyak-orang-error" class="error-message"></span>
 
-                        <label>Banyak orang:</label>
-                        <input type="text" id="banyak-orang" name="banyak-orang" placeholder="Berapa banyak orang"/>
+                        <label for="waktu-reservasi">Tanggal dan Waktu :</label>
+                        <input type="datetime-local" id="waktu-reservasi" name="waktu-reservasi"/><br><br>
+                        <span id="waktu-reservasi-error" class="error-message"></span>
 
-                        <label>Tanggal dan Waktu :</label>
-                        <input type="text" id="nama" name="nama" placeholder="Nama yang mereservasi"/>
+                        <!--Utk pesan khusus, tidak wajib diisi oleh User/Pelanggan-->
+                        <label for="pesan-khusus">Pesan/Permintaan Khusus</label><p>
+                        <textarea name="pesan-khusus" id="pesan-khusus" name="pesan-khusus" rows="5" cols="33"></textarea><br>
 
-                        <label>Pesan/Permintaan Khusus :</label>
-                        <input type="text" id="pesan-pelanggan" name="pesan-pelanggan" placeholder="Pesan atau Request"/>
-                    
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Kirim">
                     </form>
                 </section>
 
@@ -102,5 +128,17 @@
         </footer>
     </section>
 </body>
+<script type="text/javascript">
+    functionvalidasi(); 
+    let namapelanggan = document.getElementById("nama-pelanggan").value;
+    let banyakorang = document.getElementById("banyak-orang").value;
+    let waktureservasi = document.getElementById("waktu-reservasi").value;
+    if (namapelanggan !="" && banyak-orang!="" && waktu-reservasi !=""){
+        return true;
+    }else{
+        alert('Isi datanya dengan lengkap!');
 
+    }
+
+</script>
 </html>

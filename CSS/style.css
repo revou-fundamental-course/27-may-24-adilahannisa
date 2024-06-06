@@ -10,9 +10,10 @@ nav>section {
 }
 
 .logo-icon {
-    height: 50px;
-    width: 50px;
-    border: 1px solid black;
+    height: 90px;
+    width: 90px;
+    border-radius: 60%;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQL5urIuFf-XBhH98KhwAsF10p8iymLTXsD6A&s)
 }
 
 .nav-item {
@@ -21,6 +22,7 @@ nav>section {
     border-radius: 8px;
 }
 
+
 .banner-container {
     height: 258px;
     border: 1px solid black;
@@ -28,17 +30,18 @@ nav>section {
 
 .menu-list {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: stretch;
 }
 
 .contact-us-section {
-    display: flex;
+    display: flexbox;
 }
 
 input[type=text], select {
-    width: 100%;
+    width: 40%;
     padding: 12px 20px;
-    margin: 8px 0;
+    margin: 10px 0;
     display: block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -47,7 +50,7 @@ input[type=text], select {
 
 /* Style utk tombol submit */
 input[type=submit] {
-    width: 100%;
+    width: 40%;
     background-color: #04AA6D;
     color: white;
     padding: 14px 20px;
@@ -60,4 +63,10 @@ input[type=submit] {
 /*Style jika tombol submit ditekan*/
 input[type=submit]:hover {
     background-color: #45a049;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
 }
